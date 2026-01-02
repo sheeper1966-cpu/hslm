@@ -2,111 +2,168 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<title>华师学生联盟 - 官方网站</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>华师学生联盟</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
 body {
-  margin: 0;
-  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
-  background: #f4f6f8;
-  color: #333;
+    font-family: "Microsoft YaHei", sans-serif;
+    background-color: #f8f9fa;
 }
-
-header {
-  background: linear-gradient(135deg, #3f87ff, #5fa8ff);
-  color: white;
-  padding: 30px 20px;
-  text-align: center;
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
 }
-
-section {
-  max-width: 900px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+.hero {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 100px 0;
 }
-
-h2 {
-  margin-top: 0;
-  border-left: 5px solid #3f87ff;
-  padding-left: 10px;
+.section-title {
+    border-bottom: 4px solid #007bff;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-weight: bold;
 }
-
 .notice {
-  background: #f0f6ff;
-  border: 1px solid #cfe0ff;
-  padding: 15px;
-  border-radius: 8px;
-  color: #1f3f7f;
+    background: #fff3cd;
+    border-left: 5px solid #ffc107;
+    padding: 15px;
+    border-radius: 6px;
 }
-
-.members {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+.member-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+    text-align: center;
 }
-
-.member {
-  background: #fafafa;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 15px;
-}
-
-.member h3 {
-  margin: 0 0 5px;
-}
-
 footer {
-  text-align: center;
-  padding: 20px;
-  color: #888;
-  font-size: 14px;
+    background-color: #343a40;
+    color: #ccc;
+}
+#snake-canvas {
+    border: 4px solid #007bff;
+    background: black;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>华师学生联盟</h1>
-  <p>学生交流 · 互助 · 共创</p>
-</header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+<div class="container">
+<a class="navbar-brand" href="#">华师学生联盟</a>
+</div>
+</nav>
 
-<section>
-  <h2>📢 公告栏</h2>
-  <div class="notice">
-    本网站仅为测试
-  </div>
+<section class="hero text-center">
+<div class="container">
+<h1 class="display-4 fw-bold">欢迎来到华师学生联盟</h1>
+<p class="lead mt-3">团结清丰高中学子，共建校园文化</p>
+</div>
 </section>
 
-<section>
-  <h2>👥 管理人员</h2>
-  <div class="members">
-
-    <div class="member">
-      <h3>Fuwa</h3>
-      <p>年级：高一</p>
-      <p>职务：待定</p>
-    </div>
-
-  </div>
+<section class="py-5 bg-white">
+<div class="container">
+<h2 class="section-title mb-4">公告栏</h2>
+<div class="notice">
+<strong>公告：</strong> 本网站仅为测试
+</div>
+</div>
 </section>
 
-<section>
-  <h2>📌 关于我们</h2>
-  <p>
-    华师学生联盟是一个以学生交流、学习互助为目标的非盈利学生组织，
-    本网站目前处于测试阶段，后续将逐步完善内容与功能。
-  </p>
+<section class="py-5 bg-light">
+<div class="container">
+<h2 class="section-title mb-4">管理人员</h2>
+<div class="row justify-content-center">
+<div class="col-md-4">
+<div class="member-card">
+<h4>Fuwa</h4>
+<p>年级：高一</p>
+<p class="text-muted">职务：待定</p>
+</div>
+</div>
+</div>
+</div>
 </section>
 
-<footer>
-  © 2026 华师学生联盟 · 测试站点
+<section class="py-5 bg-white">
+<div class="container">
+<h2 class="section-title mb-4">关于我们</h2>
+<p class="lead">
+华师学生联盟是由学生自发组织的交流平台，致力于促进学习互助、活动组织与校园文化建设。
+</p>
+</div>
+</section>
+
+<section class="py-5 bg-light">
+<div class="container">
+<h2 class="section-title mb-4 text-center">休闲小游戏：贪吃蛇</h2>
+<div class="text-center">
+<canvas id="snake-canvas" width="400" height="400"></canvas>
+<p class="mt-3 text-muted">使用方向键 ↑ ↓ ← → 操作</p>
+</div>
+</div>
+</section>
+
+<section class="py-5 bg-white">
+<div class="container">
+<h2 class="section-title mb-4">联系我们</h2>
+<p>邮箱：459761750@qq.com</p>
+<p>地址：河南省濮阳市清丰县 华中师范大学附属清丰高级中学</p>
+</div>
+</section>
+
+<footer class="py-4 text-center">
+<p class="mb-0">© 2026 华师学生联盟 | 测试站点</p>
 </footer>
+
+<script>
+const canvas = document.getElementById("snake-canvas");
+const ctx = canvas.getContext("2d");
+const size = 20;
+let snake = [{x:10,y:10}];
+let food = {x:15,y:15};
+let dx = 0, dy = 0;
+
+document.addEventListener("keydown", e=>{
+if(e.key==="ArrowUp"&&dy!==1){dx=0;dy=-1;}
+if(e.key==="ArrowDown"&&dy!==-1){dx=0;dy=1;}
+if(e.key==="ArrowLeft"&&dx!==1){dx=-1;dy=0;}
+if(e.key==="ArrowRight"&&dx!==-1){dx=1;dy=0;}
+});
+
+function draw(){
+ctx.fillStyle="black";
+ctx.fillRect(0,0,400,400);
+
+snake.forEach((s,i)=>{
+ctx.fillStyle=i===0?"#00ff00":"#90ee90";
+ctx.fillRect(s.x*size,s.y*size,size-2,size-2);
+});
+
+ctx.fillStyle="red";
+ctx.fillRect(food.x*size,food.y*size,size-2,size-2);
+}
+
+function update(){
+const head={x:snake[0].x+dx,y:snake[0].y+dy};
+if(head.x<0||head.y<0||head.x>=20||head.y>=20){snake=[{x:10,y:10}];dx=dy=0;}
+snake.unshift(head);
+if(head.x===food.x&&head.y===food.y){
+food={x:Math.floor(Math.random()*20),y:Math.floor(Math.random()*20)};
+}else{
+snake.pop();
+}
+draw();
+}
+
+draw();
+setInterval(update,120);
+</script>
 
 </body>
 </html>
